@@ -4,3 +4,8 @@
 I don't have enough knowledge on updating this because the references don't seem to ungrey out and reference paths won't update.
 
 I'll leave it to you guy's hands.
+
+
+Creds
+https://thunderstore.io/package/rob/Twitch/
+https://github.com/ArcPh1r3/
