@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC2D1E43-1942-4F01-8E17-A538EB1CC94E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twitch</RootNamespace>
+    <AssemblyName>Twitch</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplyHorns.cs" />
+    <Compile Include="Assets.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchAmbush.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchChargeBazooka.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchCheese.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchExplode.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchExpunge.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchFireBazooka.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchFireBolt.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchFireShotgun.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchFireSMG.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchScurry.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchThrowBomb.cs" />
+    <Compile Include="EntityStates\TwitchStates\TwitchThrowGrenade.cs" />
+    <Compile Include="MenuAnim.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeparateFromParent.cs" />
+    <Compile Include="SkillModifiers\TwitchAmbushSkillModifier.cs" />
+    <Compile Include="SkillModifiers\TwitchCheeseSkillModifier.cs" />
+    <Compile Include="SkillModifiers\TwitchExpungeSkillModifier.cs" />
+    <Compile Include="SkillModifiers\TwitchFireBoltSkillModifier.cs" />
+    <Compile Include="SkillModifiers\TwitchFireShotgunSkillModifier.cs" />
+    <Compile Include="SkillModifiers\TwitchFireSMGSkillModifier.cs" />
+    <Compile Include="SkillModifiers\TwitchScurrySkillModifier.cs" />
+    <Compile Include="SkillModifiers\TwitchThrowBombSkillModifier.cs" />
+    <Compile Include="Sounds.cs" />
+    <Compile Include="Twitch.cs" />
+    <Compile Include="TwitchController.cs" />
+    <Compile Include="TwitchGrenadeController.cs" />
+    <Compile Include="TwitchGrenadeMain.cs" />
+    <Compile Include="TwitchGrenadeTicker.cs" />
+    <Compile Include="TwitchRocketModelController.cs" />
+    <Compile Include="Unlockables\MasteryUnlockable.cs" />
+    <Compile Include="Unlockables\SimpleUnlockable.cs" />
+    <Compile Include="Unlockables\TarUnlockable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="twitch" />
+    <EmbeddedResource Include="Twitch.bnk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="libs\Assembly-CSharp.dll" />
+    <Analyzer Include="libs\Assembly-CSharp.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>References\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="AncientScepter">
+      <HintPath>References\AncientScepter.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>References\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>References\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>References\BepInEx.Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.MonoMod.Loader">
+      <HintPath>References\BepInEx.MonoMod.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Preloader">
+      <HintPath>References\BepInEx.Preloader.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks">
+      <HintPath>References\Facepunch.Steamworks.dll</HintPath>
+    </Reference>
+    <Reference Include="HGCSharpUtils">
+      <HintPath>References\HGCSharpUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="HGUnityUtils">
+      <HintPath>References\HGUnityUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="MMHOOK_Assembly-CSharp">
+      <HintPath>References\MMHOOK_Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>References\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>References\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>References\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>References\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod">
+      <HintPath>References\MonoMod.exe</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>References\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>References\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="R2API">
+      <HintPath>References\R2API.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>References\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>References\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>References\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>References\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>References\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>References\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>References\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>References\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>References\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>References\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>References\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>References\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Wwise">
+      <HintPath>References\Wwise.dll</HintPath>
+    </Reference>
+    <Reference Include="Zio">
+      <HintPath>References\Zio.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
